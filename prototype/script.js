@@ -72,4 +72,16 @@ Mahasiswa.prototype.tidur = function (waktu) {
   return `Halo ${this.nama}, selamat tidur.`;
 };
 
+Mahasiswa.prototype.gender = function (gender) {
+  this.gender = gender;
+  return `Halo ${this.nama}, kamu adalah seorang ${gender}`;
+};
+
 let mhs1 = new Mahasiswa('Zia', 10);
+
+let jadwalPelajaran = [];
+jadwalPelajaran = [
+  { jam: '07.00 - 08.00', pelajaran: 'Bahasa Indonesia', guru: 'Pak ari' },
+  { jam: '09.00 - 10.00', pelajaran: 'Bahasa Inggris', guru: 'Pak agus' },
+  { jam: '11.00 - 12.00', pelajaran: 'Bahasa France', guru: 'Pak arya' },
+];

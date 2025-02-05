@@ -73,4 +73,20 @@ Mahasiswa.prototype.tidur = function (jam) {
   console.log(`Halo ${this.nama}, selamat beristirahat.`);
 };
 
+Mahasiswa.prototype.bagi = function (x) {
+  if (x % 2 == 0) {
+    return console.log(`${x} is even`);
+  } else if (x % 2 == 1) {
+    return console.log(`${x} is odd`);
+  }
+};
+
+Mahasiswa.prototype.emailcek = function (email) {
+  if (email.includes('@')) {
+    return console.log('email is valid');
+  } else {
+    console.log('email is invalid');
+  }
+};
+
 let dika = new Mahasiswa('dika', 10);
