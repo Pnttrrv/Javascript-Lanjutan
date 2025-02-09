@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  border: 1px solid black;
+  transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s, 1s background-color;
+  cursor: pointer;
+}
+
+.size {
+  width: 150px;
+  height: 150px;
+  margin-top: 25px;
+}
+
+.caption {
+  background-color: black;
+}
