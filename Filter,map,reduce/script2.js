@@ -22,13 +22,14 @@ let arrDurasi = jl
   })
   .reduce((a, b) => a + b);
 
-let menit = (arrDurasi / 60).toFixed(0);
-let jam = (menit / 60).toFixed(0);
-let totmen = (menit / 60 - jam).toFixed(2);
+let jam = Math.floor(arrDurasi / 3600);
+arrDurasi = arrDurasi - jam * 3600;
+let menit = Math.floor(arrDurasi / 60);
+let detik = arrDurasi - menit * 60;
 // let bulat = jam.toFixed(2);
-console.log(totmen);
+console.log(arrDurasi);
 
-spanJumlahDurasi.innerHTML = `${jam} jam, ${totmen} menit`;
+spanJumlahDurasi.innerHTML = `${jam} jam, ${menit} menit, ${detik} detik`;
 
 // let waktu = jl
 //   .filter((e) => e.innerHTML.includes('Javascript'))
