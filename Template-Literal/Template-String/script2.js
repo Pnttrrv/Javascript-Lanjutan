@@ -81,9 +81,53 @@ function coba(strings, ...values) {
   //   strings.forEach((Text, i) => {
   //     str += `${Text}${values[i] || ''}`;
   //   });
+
   return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}`, '');
+
   //   console.log(str);
 }
+let total = 0;
+function tambah(...args) {
+  for (let angka of args) {
+    total += angka;
+  }
+  return `${total} adalah ${total % 2 == 0 ? 'Genap' : 'Ganjil'}`;
+}
+
+// spread operator
+let arr1 = [0, 1, 2, 3, '"part 1"'];
+let arr2 = [...arr1, '"part 2"', 4, 5, 6, 7];
+// console.log(arr2);
+
+let hasil1 = 0;
+// rest menampung element dari spread angka
+function pertambahan(...args) {
+  for (let hasil of args) {
+    hasil1 += hasil;
+  }
+  return hasil1;
+}
+let angka = [1, 2, 3, 4, 5];
+// spread angka untuk masuk ke dalam rest parameter args
+let jumlah = pertambahan(...angka);
+console.log(jumlah);
+
+// spread concat
+let text1 = ['nama saya'];
+let text2 = ['adalah budi'];
+let text3 = [...text1, ...text2];
+console.log(text3);
+let hasilKali = [];
+function kali(angka1, ...argg) {
+  argg.forEach((element) => {
+    hasilKali.push(angka1 * element);
+  });
+  return hasilKali;
+}
+// kali(2, 1, 2, 3);
+
+const temperature = [50, 72, 32, 25, 76, 46, 22, 10];
+console.log(Math.min(...temperature));
 
 let str = coba`Halo nama saya ${nama}, saya ${umur} tahun`;
 console.log(str);
