@@ -129,5 +129,13 @@ function kali(angka1, ...argg) {
 const temperature = [50, 72, 32, 25, 76, 46, 22, 10];
 console.log(Math.min(...temperature));
 
+function siswa(nama, kelas, ...nilai) {
+  let totalNilai = 0;
+  for (let i of nilai) {
+    totalNilai += i;
+  }
+  return `Nama : ${nama}, Kelas : ${kelas}, Total Nilai : ${totalNilai}`;
+}
+
 let str = coba`Halo nama saya ${nama}, saya ${umur} tahun`;
 console.log(str);
