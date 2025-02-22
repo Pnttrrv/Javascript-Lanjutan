@@ -1,4 +1,4 @@
-const angka = [10, 4, 1, 6, 2, 7, 3, 5, 8];
+const angka = [9, 5, 1, 7, 3, 8, 4, 2, 6];
 
 // Bubble sort algoritma
 
